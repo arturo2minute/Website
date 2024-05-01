@@ -6,11 +6,10 @@ body {
     margin: 0;
     padding: 0;
     background-color: #000000;
-    color: #e9e9e9;
 }
 header {
     background-color: #000000;
-    color: #fff;
+    color: #a1a1a1;
     padding: 20px;
     text-align: center;
     position: relative; /* Ensure header is a positioned container */
@@ -20,23 +19,32 @@ header {
     top: 10px;
     right: 10px;
 }
-
 .menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    
 }
-
 .menu ul li {
     display: inline;
-    margin-right: 10px;
+    margin-right: 90px;
 }
-
 .menu ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #94BFFF;
     font-weight: bold;
-    font-size: 26px;
+    font-size: 34px;
+}
+.menu ul li a:hover {
+    color: #7a9bf7;
+}
+@media screen and (max-width: 920px) {
+    .menu ul li {
+        margin-right: 10px; /* Adjusted margin for smaller screens */
+    }
+    .menu ul li a {
+        font-size: 26px
+    }
 }
 
 .container {
@@ -65,31 +73,50 @@ h1 {
     text-align: center; /* Center the text horizontally */
     margin-left: 15%; /* Adjusts the left margin to center the content on the left half */
     font-size: 60px; /* Adjust the font size as needed */
+    color: #a1a1a1;
+}
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.blink {
+    animation: blink 1s infinite;
 }
 h2 {
     margin-top: 0px;
     text-align: center; /* Center the text horizontally */
     margin-left: 15%; /* Adjusts the left margin to center the content on the left half */
     font-size: 30px;
+    color: #a1a1a1;
 }
 p {
     margin-left: 32.5%;
     line-height: 1.6;
     text-align: left;
     font-size: 20px;
+    color: #a1a1a1;
 }
 form {
     margin-top: 20px;
 }
-
 button {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #94BFFF;
+    color: #363636;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
     cursor: pointer;
+    border-radius: 25px;
+    padding: 20px 40px;
+    font-weight: bold;
+    font-size: 36px;
+    margin-left: 32.5%;
+    margin-top: 5%
+}
+#contact-button a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
 }
 button:hover {
-    background-color: #0056b3;
+    background-color: #7a9bf7;
 }
