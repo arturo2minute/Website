@@ -1,3 +1,10 @@
+function toggleMenu() {
+    const menu = document.querySelector(".menu-links");
+    const icon = document.querySelector(".hamburger-icon");
+    menu.classList.toggle("open");
+    icon.classList.toggle("open");
+  }
+
 document.addEventListener("DOMContentLoaded", function() {
     const contactForm = document.getElementById("contact-form");
 
@@ -18,19 +25,3 @@ document.addEventListener("DOMContentLoaded", function() {
 
     });
 });
-
-window.addEventListener('scroll', function() {
-    var experienceDiv = document.getElementById('experience');
-    var position = experienceDiv.getBoundingClientRect();
-  
-    // Check if the top of the experience section is within the viewport
-    if (position.top >= 0 && position.bottom <= window.innerHeight) {
-        setTimeout(function() {
-            experienceDiv.style.display = 'block'; // Reveal the experience section
-        }, 1000);
-      console.log("block");
-    } else {
-      experienceDiv.style.display = 'none'; // Hide the experience section if it's not in the viewport
-      console.log("none");
-    }
-  });

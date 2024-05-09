@@ -5,92 +5,301 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arturo Diaz</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mediaqueries.css"/>
 </head>
 <body>
-    <nav class="menu">
-        <ul>
-            <li><a href="#home">Home</a></li>
+    <nav id="desktop-nav">
+        <div class="logo"></div>
+        <div>
+          <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
-        </ul>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
     </nav>
-    <nav id="desktop-nav">
-        <div class="logo">Arturo Diaz</div>
-        <div>
+
+    <nav id="hamburger-nav">
+        <div class="logo"></div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+            </div>
+            <div class="menu-links">
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <section id="profile">
+        <div class="section__text">
+            <h1 class="title">Hey there, I'm</h1>
+            <h1 class="title">Arturo Diaz! <span class="blink">|</span></h1>
+            <p class="section__text__p2">Software Engineer</p>
+            <p class="section__text__p1">An upbeat Software Developer driven by a passion for<br>
+                crafting innovative solutions to challenging problems.</p>
+            <div class="btn-container">
+                <button
+                    class="btn btn-color-0"
+                    onclick="window.open('./assets/resume.pdf')">
+                    Download Resume
+                </button>
+                <button class="btn btn-color-1" onclick="location.href='#contact'">
+                    Contact Info
+                </button>
+            </div>
+            <div id="socials-container">
+                <img
+                    src="./assets/linkedin.png"
+                    alt="My LinkedIn profile"
+                    class="icon"
+                    onclick="location.href='https://www.linkedin.com/in/arturo-diaz-/'"/>
+                <img
+                    src="./assets/github.png"
+                    alt="My Github profile"
+                    class="icon"
+                    onclick="location.href='https://github.com/'"/>
+            </div>
+        </div>
+        <div class="section__pic-container">
+            <img src="./assets/moon.png" alt="Profile Picture" />
+        </div>
+    </section>
+
+    <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+          <div class="section__pic-container">
+            <img
+              src="./assets/portrait.png"
+              alt="Profile picture"
+              class="about-pic"
+            />
+          </div>
+          <div class="about-details-container">
+            <div class="about-containers">
+              <div class="details-container">
+                <img
+                  src="./assets/UO.png"
+                  alt="Education icon"
+                  class="icon-UO"
+                />
+                <h3>Education</h3>
+                <p>University of Oregon B.S.</p>
+                <p> <br>- CS GPA: 3.76 Cumulative GPA: 3.48
+                    <br>- Deans list for six terms in previous 3 years.
+                    <br>- Relevant coursework: Machine Learning 472, Linear Algebra 341, Statistic
+                    Models and Math 343, Computational Science 410, Principals of Programming
+                    Language 425
+                </p>
+              </div>
+              <div class="details-container">
+                <img
+                  src="./assets/bike.png"
+                  alt="Education icon"
+                  class="icon-bike"
+                />
+                <img
+                  src="./assets/plane.png"
+                  alt="Education icon"
+                  class="icon-plane"
+                />
+                <h3>Hobbies</h3>
+                <p>- Mountain bike trail riding is my ultimate escape, where every twist and 
+                    turn of the trail becomes a thrilling adventure. Each uphill climb rewards 
+                    me with breathtaking views and an adrenaline filled downhill experence.
+                </p>
+                <p>- My passion for travel is like a flame that never dims. Whether it's discovering 
+                    hidden gems off the beaten path or immersing myself in bustling city life, every 
+                    journey ignites my sense of wonder and leaves me craving more.
+                </p>
+              </div>
+            </div>
+            <div class="text-container">
+              <p>
+                Aspiring Software Developer driven by a passion for crafting innovative
+                solutions and pioneering efficient applications of AI technology. Proven
+                track record of an unyielding drive and rapid skill development.
+                Knowledgeable in full-stack development, agile methodologies, and
+                problem-solving. Strong ability to collaborate with cross-functional
+                teams and adapt to changing project requirements. Committed to
+                continuous learning and propelling myself above and beyond the
+                competition.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#experience'"
+        /> -->
+    </section>
+
+    <section id="experience">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Software Engineer Intern</h2>
+                    <div class="article-container">
+                        <h1 class="experience-position">2 Minute Warning</h1>
+                        <p class="experience-dates">Jan 2024 - June 2024</p>
+                    </div>
+                    <div class="experience-summary">
+                        <div>
+                            <img src=
+                            "./assets/2mw.png"
+                            alt="2mw">
+                        </div>
+                        <p>
+                            - Utilized Python's PyQt5 and OpenCV libraries to create new AI development features.<br>
+                            <br>- Led autolabeling efforts by developing custom Python scripts to automate data labeling for AI model training.<br>
+                            <br>- Extended existing codebases with new features that balanced performance, scalability, and code maintenance.<br>
+                            <br>- Participated in code reviews, implemented validation plans, and contributed with industry-standard Agile methodologies and DevOps practices.<br>
+                            <br>- Utilized data-driven insights to address compliance and customer issues in an on-call engineering (OCE) model.<br>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Programmer/CAD Support</h2>
+                    <div class="article-container">
+                        <h1 class="experience-position">Bulk Handling Systems</h1>
+                        <p class="experience-dates">Apr 2021 - Current</p>
+                    </div>
+                    <div class="experience-summary">
+                        <div>
+                            <img src=
+                            "./assets/bhs.png"
+                            alt="2mw">
+                        </div>
+                        <p>
+                            - Developed advanced workflows using VB.net in Visual Studio under an MVVM only architecture.<br>
+                            <br>- Spearheaded internal company programs with advances in UI refactoring.<br>
+                            <br>- Updated company UI design, enhancing user experience and usability in XAML.<br>
+                            <br>- Managed company data by creating reports and utilizing MySQL to organize and analyze information effectively.<br>
+                            <br>- Acquired comprehensive knowledge of the CAD process in under a year, demonstrating a strong ability to learn new skills independently.<br>
+                            <br>- Now overseeing and managing all current sales models.<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img
+                            src="./assets/lstm.png"
+                            alt="Project 1"
+                            class="project-img-lstm"/>
+                    </div>
+                    <h2 class="experience-sub-title project-title">LSTM ML Project</h2>
+                    <div class="btn-container">
+                        <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/'">Github</button>
+                        <!-- <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/'">Live Demo</button> -->
+                    </div>
+                </div>
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img
+                            src="./assets/whitehat.png"
+                            alt="Project 2"
+                            class="project-img-whitehat"/>
+                    </div>
+                    <h2 class="experience-sub-title project-title">White Hat Detection - 2MW</h2>
+                    <div class="btn-container">
+                        <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/'">Github</button>
+                        <!-- <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/'">Live Demo</button> -->
+                    </div>
+                </div>
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img
+                            src="./assets/deployment.png"
+                            alt="Project 3"
+                            class="project-img-deployment"
+                        />
+                    </div>
+                    <h2 class="experience-sub-title project-title">AutoCAD Deployment - BHS</h2>
+                    <div class="btn-container">
+                        <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/'">Github</button>
+                        <!-- <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/'">Live Demo</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <img
+            src="./assets/arrow.png"
+            alt="Arrow icon"
+            class="icon arrow"
+            onclick="location.href='./#contact'"
+        /> -->
+    </section>
+
+    <section id="contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+            <img
+                src="./assets/email.png"
+                alt="Email icon"
+                class="icon contact-icon email-icon"
+            />
+            <p><a href="mailto:6arturodiaz@gmail.com">6arturodiaz@gmail.com</a></p>
+            </div>
+            <div class="contact-info-container">
+            <img
+                src="./assets/linkedin.png"
+                alt="LinkedIn icon"
+                class="icon contact-icon"
+            />
+            <p><a href="https://www.linkedin.com/in/arturo-diaz-/">LinkedIn</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <nav>
+            <div class="nav-links-container">
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-        </div>
-    </nav>
-    <div id="home" class="container">
-        <div class="content">
-            <h1>Hey there, I'm<br>Arturo Diaz! <span class="blink">|</span></h1>
-            <h2>Software Developer</h2>
-            <p>An upbeat Software developer driven by a<br>passion for crafting innovative solutions to<br>challenging problems.</p>
-            <button id="contact-button"><a href="#contact">Contact Me</a></button>
-        </div>
-        <div class="image-container">
-            <img src="moon.png" alt="Your Image">
-        </div>
-    </div>
-    <div id="about" class="container">
-        <!-- Content for About section -->
-        <img src="moon.png" alt="Your Image">
-    </div>
-
-    <div id="experience" class="container">
-        <!-- Content for Experience section -->
-        <div class="content">
-            <!-- Your content here -->
-            <div class="mw2">
-                <div>
-                    <h1>My Experience</h1>
-                    <h2>Software Engineer - 2 Minute Warning</h2>
-                    <p>- Utilized Python's PyQt5 and OpenCV libraries to create new AI development
-                        features.
-                        <br>- Led autolabeling efforts by developing custom Python scripts to automate data labeling for AI model training
-                        <br>- Extended existing codebases with new features that balanced performance, scalability, and code maintenance.
-                        <br>- Participated in code reviews, implemented validation plans, and contributed with
-                        industry-standard Agile methodologies and DevOps practices.
-                        <br>- Utilized data-driven insights to address compliance and customer is- sues in an 
-                        on-call engineering (OCE) model.
-                    </p>
-                </div>
-                <img src="2mw.png" alt="2mw">
             </div>
-            <!-- Your content here -->
-            <div class="bhs">
-                <div>
-                    <h2>Programmer/CAD Support - Bulk Handling Systems</h2>
-                    <p>- Developed advanced workflows using VB.net in Visual Studio under an MVVM architecture.
-                        <br>- Spearheaded internal company programs with advances in UI refactor.
-                        <br>- Updated company UI design, enhancing user experience and usability in XAML.
-                        <br>- Managed company data by creating reports and utilizing MySQL to organize and 
-                        analyze information effectively.
-                        <br>- Acquired comprehensive knowledge of the CAD process in under a year, demonstrating a 
-                        strong ability to learn new skills independently.
-                        <br>- Overseeing and updating all current sales asset models.
-                    </p>
-                </div>
-                <img src="bhs.png" alt="2mw">
-            </div>
-        </div>
-        <!-- <div class="image-container">
-            <img src="stars.png" alt="Your Image">
-        </div> -->
-    </div>
-
-    <div id="projects" class="container">
-        <!-- Content for Projects section -->
-        <img src="moon.png" alt="Your Image">
-    </div>
-    <div id="contact" class="container">
-        <!-- Content for contact section -->
-        <img src="moon.png" alt="Your Image">
-    </div>
+        </nav>
+        <p>Copyright &#169;2024 Arturo Diaz. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
