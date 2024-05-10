@@ -525,6 +525,15 @@ article .icon {
     border-color: #7a9bf7;
 }
 
+.article-containers {
+    display: flex;
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: center;
+}
+
 /* CContact Section */
 
 #contact {
